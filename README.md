@@ -1,0 +1,2 @@
+# astrbot_plugin_tieba_push
+让你的bot能自己去贴吧搬石
