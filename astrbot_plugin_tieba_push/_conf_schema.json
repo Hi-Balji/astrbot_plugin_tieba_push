@@ -1,0 +1,62 @@
+{
+    "forums": {
+        "description": "贴吧列表",
+        "hint": "要抓取的吧名(不是链接),按吧名访问",
+        "type": "list",
+        "default": ["搬石", "核战避难所", "地狱笑话", "吊图"]
+    },
+    "per_forum": {
+        "description": "每个吧每次推送帖数",
+        "hint": "每次推送从热门帖中选取的帖子数量",
+        "type": "int",
+        "default": 2
+    },
+    "min_replies": {
+        "description": "热度门槛(最低回复数)",
+        "hint": "只推回复数达到该值的帖子。免费接口拿不到点赞数,以回复数作为热度筛选;设为0则不过滤。注意:门槛过高(如800)时中小规模吧可能长期无帖可推,建议50以下或按吧规模调整",
+        "type": "int",
+        "default": 50
+    },
+    "push_times": {
+        "description": "每日推送时间(HH:MM)",
+        "hint": "可配置多个时间点,如 [\"08:00\", \"12:30\", \"20:00\"]",
+        "type": "list",
+        "default": ["08:00", "20:00"]
+    },
+    "group_whitelist": {
+        "description": "推送群白名单(群号)",
+        "hint": "只向列表中的群推送;为空则不推送(手动指令仍可用)",
+        "type": "list",
+        "default": []
+    },
+    "tieba_cookie": {
+        "description": "贴吧Cookie(可选,只填BDUSS值即可)",
+        "hint": "最简方式:电脑浏览器登录tieba.baidu.com后,F12→应用(Application)→Cookie→https://tieba.baidu.com→找到BDUSS→复制它的值填入;或复制整段Cookie。填完用 /贴吧cookie测试 指令验证",
+        "type": "string",
+        "default": ""
+    },
+    "platform": {
+        "description": "平台实例ID(一般无需修改)",
+        "hint": "推送目标用的平台实例ID。插件会自动识别QQ(aiocqhttp)平台的实例;仅多平台特殊场景才需要手动填写WebUI消息平台里的实例ID",
+        "type": "string",
+        "default": "aiocqhttp"
+    },
+    "max_images_per_post": {
+        "description": "每帖最多图片数",
+        "hint": "超过的图片丢弃,避免转发消息过大",
+        "type": "int",
+        "default": 9
+    },
+    "max_video_mb": {
+        "description": "单个视频大小上限(MB)",
+        "hint": "超过上限的视频跳过不下载",
+        "type": "int",
+        "default": 30
+    },
+    "timeout": {
+        "description": "请求超时(秒)",
+        "hint": "抓取页面/图片的超时时间",
+        "type": "int",
+        "default": 20
+    }
+}
